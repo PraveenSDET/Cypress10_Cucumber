@@ -6,9 +6,9 @@ Feature: Demo test for UI validation
 Scenario Outline: Tutorials point automation practice
     Given user accesses the automation practice site
     When user enters first name "<Dataset>"
-    # And user extracts the last name label
-    # Then user asserts the label value
-    # When user clicks the 'Button' button
+    And user extracts the last name label
+    Then user asserts the label value
+    When user clicks the 'Button' button
 
 Examples:
     | Dataset  |

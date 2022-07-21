@@ -24,11 +24,15 @@
     "json": {
       "enabled": true,
       "output": "testResults/cucumberJson/cucumber-results.json",
-      "formatter": "cucumber-json-formatter"
+      "formatter": "node",
+      "args": ["json-generator.js"]
     },
     "messages": {
       "enabled": true,
       "output": "testResults/cucumberJson/cucumber-messages.ndjson"
     }
+  },
+  "dependencies": {
+    "cucumber-json-report-formatter": "^0.0.9"
   }
 }
