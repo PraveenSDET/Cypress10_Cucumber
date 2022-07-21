@@ -1,0 +1,34 @@
+{
+  "name": "cypress10cucumberframework",
+  "version": "1.0.0",
+  "description": "Cypress 10 framework integrated with Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber"
+  ],
+  "author": "Praveenkumar Appusamy",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^11.5.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.3",
+    "cypress": "^10.3.1",
+    "esbuild": "^0.14.49",
+    "multiple-cucumber-html-reporter": "^1.21.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/tests/steps/*.js",
+    "json": {
+      "enabled": true,
+      "output": "testResults/cucumberJson/cucumber-results.json",
+      "formatter": "cucumber-json-formatter"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "testResults/cucumberJson/cucumber-messages.ndjson"
+    }
+  }
+}
