@@ -2,3 +2,5 @@ node_modules
 testResults/videos
 cucumber-json-formatter
 package-lock.json
+testResults/allureJson
+testResults/allureReport

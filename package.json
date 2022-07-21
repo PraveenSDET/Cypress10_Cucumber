@@ -4,7 +4,14 @@
   "description": "Cypress 10 framework integrated with Cucumber",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clear": "npm cache clean --force",
+    "cucumberHtmlReport": "node cucumber-html-report.js",
+    "open": "cypress open",
+    "Test": "cypress run",
+    "Chrome": "npm run Test -- --browser chrome --headed && npm run cucumberHtmlReport && npm run allureReport",
+    "browserstack": "browserstack-cypress run --sync",
+    "lambdatest": "lambdatest-cypress run",
+    "allureReport": "allure generate testResults//allureJson --clean -o testResults//allureReport && allure open testResults//allureReport"
   },
   "keywords": [
     "cypress",
@@ -15,6 +22,8 @@
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^11.5.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.3",
+    "@shelex/cypress-allure-plugin": "^2.28.0",
+    "allure-commandline": "^2.18.1",
     "cucumber-json-report-formatter": "^0.0.9",
     "cypress": "^10.3.1",
     "esbuild": "^0.14.49",
